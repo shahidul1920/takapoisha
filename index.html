@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
-    <section class="container">
-        <div class="myBalance">
-            <h2>Total Balance</h2>
-            <p>0000</p>
+    <section class="container" id="box">
+
+        <div class="newBalance">
+            <h2>New Balance</h2>
+            <p class="numbs">0000</p>
+        </div>
+
+        <div class="wdrwBalance">
+            <h2>Withdraw Balance</h2>
+            <p class="numbs">0000</p>
         </div>
 
         <div class="myBalance">
             <h2>Total Balance</h2>
-            <p>0000</p>
+            <p class="numbs">0000</p>
         </div>
 
-        <div class="myBalance">
-            <h2>Total Balance</h2>
-            <p>0000</p>
-        </div>
     </section>
 
+    <div class="inputBox">
+        <input type="text" id="addmoney">
+        <button class="addBtn">add money</button><br/><br/>
+        <input type="text" id="takemoney">
+        <button class="takeBtn">take money</button>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
