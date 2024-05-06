@@ -1,17 +1,37 @@
-let numbs = document.querySelectorAll(".numbs")
-let takemoney = document.getElementById("takemoney").value;
-let box = document.getElementById('box');
 let addBtn = document.querySelector('.addBtn');
 let takeBtn = document.querySelector('.takeBtn');
-
-
-addBtn.addEventListener('click', (e)=>{
+//Add money function
+addBtn.addEventListener('click', ()=>{
+    let numbs = Number(document.querySelector(".numbone").textContent);
     let addmoney = Number(document.getElementById("addmoney").value);
-    //console.log(addmoney)
-    if(typeof addmoney == 'number'){
-        console.log('hello');
+    const numbOneElement = document.querySelector(".numbone");
+    const tnumbs = Number(document.querySelector(".tnumbs").textContent);
+    if(isNaN(addmoney)){
+        document.getElementById('span1').innerHTML = 'enter a valid number'
     }else{
-        console.log('it not number')
+        document.getElementById('span1').innerHTML = ' '
+        numbOneElement.innerHTML = numbs + addmoney;
+        console.log(tnumbs)
+        document.querySelector(".tnumbs").innerHTML = addmoney + tnumbs;
+    }
+})
+//deposide money function
+takeBtn.addEventListener('click', ()=>{
+    const takeMoney = Number(document.querySelector('#takemoney').value);
+    const dipMoney = Number(document.querySelector('.dipnumbs').textContent);
+    console.log(dipMoney);
+    if(isNaN(takeMoney)){
+        document.getElementById('span2').innerHTML = 'enter a valid number'
+    }else{
+        const tnumbs = Number(document.querySelector(".tnumbs").textContent);
+        document.querySelector('.dipnumbs').innerHTML = takeMoney + dipMoney;
+        document.getElementById('span2').innerHTML = ' '
+       
+        if(tnumbs < takeMoney){
+            document.getElementById('span2').innerHTML = 'gorid'
+        }else{
+            document.querySelector(".tnumbs").innerHTML = tnumbs - takeMoney;
+        }
     }
 })
 
