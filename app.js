@@ -5,10 +5,13 @@ let addBtn = document.querySelector('.addBtn');
 let takeBtn = document.querySelector('.takeBtn');
 
 
-addBtn.addEventListener('click', ()=>{
-    let addmoney = document.getElementById("addmoney").value;
+addBtn.addEventListener('click', (e)=>{
+    let addmoney = Number(document.getElementById("addmoney").value);
+    //console.log(addmoney)
     if(typeof addmoney == 'number'){
-        console.log(addmoney);
+        console.log('hello');
+    }else{
+        console.log('it not number')
     }
 })
 
